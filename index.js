@@ -1,10 +1,15 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const postRoute = require("./source/routes/post.route");
 const app = express();
 
+
+app.use(cors());
+app.options('*', cors());
 app.use(express.json());
 app.use("/post", postRoute);
+
 
 
 const ConnectionURL = "mongodb://localhost:27017/postlists";
