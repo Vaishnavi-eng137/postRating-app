@@ -53,7 +53,7 @@ exports.getAverageRate = async (req, res) => {
     res.send({ avgRating: avgRating });
   } catch (err) {
     res.send(err.message);
-    console.log("hina")
+    console.log("shalu")
   }
 };
 
